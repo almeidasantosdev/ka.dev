@@ -284,6 +284,7 @@ export const translations: Record<Language, Translation> = {
     stats: {
       eyebrow: "02 / Signal",
       title: "Código em movimento.",
+      subtitle: "Repositórios recentes em destaque.",
       profile: "Ver perfil no GitHub",
       commits: "Estatísticas",
       languages: "Top linguagens",
@@ -465,6 +466,7 @@ export const translations: Record<Language, Translation> = {
     stats: {
       eyebrow: "02 / Signal",
       title: "Code in motion.",
+      subtitle: "Recent repositories in focus.",
       profile: "View GitHub profile",
       commits: "Stats",
       languages: "Top languages",
