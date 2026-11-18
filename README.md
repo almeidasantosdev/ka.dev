@@ -1,11 +1,12 @@
+# ka.dev
 
-  # Portfolio
+Site pessoal de Kleidson Almeida Santos. Apresenta o perfil de engenheiro full stack, produtos em produção, trajetória, certificados e contato, com textos em português e inglês.
 
-  This is a code bundle for Portfolio. The original project is available at https://www.figma.com/design/RH9yjJaKJGJUIuWtX39Chp/Portfolio.
+O projeto nasceu de um arquivo do Figma e roda como aplicação React + Vite + Tailwind. A versão publicada está em https://kadevpt.vercel.app
 
-  ## Running the code
+## Como rodar
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm install
+npm run dev
+```
