@@ -35,6 +35,7 @@ export type ContactLinkItem = {
   platform: string;
   username: string;
   url: string;
+  download?: string;
 };
 
 export type WorkCase = {
@@ -71,6 +72,8 @@ export type Translation = {
     summary: string;
     cta: string;
     secondaryCta: string;
+    resumeHref: string;
+    resumeDownload: string;
     location: string;
     timezone: string;
   };
@@ -251,6 +254,8 @@ export const translations: Record<Language, Translation> = {
         "Engenheiro full stack focado em backends e plataformas SaaS em produção: APIs, PostgreSQL, webhooks financeiros e automações que resolvem operação real. 5+ anos, inglês fluente, aberto a remote US/EU.",
       cta: "Ver produtos em produção",
       secondaryCta: "Baixar CV",
+      resumeHref: "/resume/kleidson-almeida-santos-curriculo.pdf",
+      resumeDownload: "Kleidson_Almeida_Santos_Curriculo_PT_backend.pdf",
       location: "Campina Grande, Brazil",
       timezone: "Remote · GMT-3",
     },
@@ -401,7 +406,8 @@ export const translations: Record<Language, Translation> = {
         {
           platform: "Currículo",
           username: "Download PDF",
-          url: "/resume/kleidson-almeida-santos-resume.pdf",
+          url: "/resume/kleidson-almeida-santos-curriculo.pdf",
+          download: "Kleidson_Almeida_Santos_Curriculo_PT_backend.pdf",
         },
         {
           platform: "WhatsApp",
@@ -433,6 +439,8 @@ export const translations: Record<Language, Translation> = {
         "Full stack engineer focused on backends and production SaaS: APIs, PostgreSQL, payment webhooks, and automations that solve real operations. 5+ years, fluent English, open to remote US/EU overlap.",
       cta: "View live products",
       secondaryCta: "Download resume",
+      resumeHref: "/resume/kleidson-almeida-santos-resume.pdf",
+      resumeDownload: "Kleidson Almeida Santos - Resume.pdf",
       location: "Campina Grande, Brazil",
       timezone: "Remote · GMT-3",
     },
@@ -584,6 +592,7 @@ export const translations: Record<Language, Translation> = {
           platform: "Resume",
           username: "Download PDF",
           url: "/resume/kleidson-almeida-santos-resume.pdf",
+          download: "Kleidson Almeida Santos - Resume.pdf",
         },
         {
           platform: "WhatsApp",

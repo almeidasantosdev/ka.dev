@@ -167,8 +167,8 @@ export function Hero() {
               />
             </a>
             <a
-              href="/resume/kleidson-almeida-santos-resume.pdf"
-              download="Kleidson Almeida Santos - Resume.pdf"
+              href={t.hero.resumeHref}
+              download={t.hero.resumeDownload}
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white/80 hover:border-white/50 hover:text-white hover:bg-white/[0.04] transition"
             >
               {t.hero.secondaryCta}

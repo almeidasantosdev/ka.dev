@@ -73,11 +73,7 @@ export function Contact() {
                 <a
                   key={link.platform}
                   href={link.url}
-                  download={
-                    link.url.endsWith(".pdf")
-                      ? "Kleidson Almeida Santos - Resume.pdf"
-                      : undefined
-                  }
+                  download={link.download}
                   target={link.url.startsWith("http") ? "_blank" : undefined}
                   rel={link.url.startsWith("http") ? "noreferrer" : undefined}
                   className="ka-index-row group flex items-center justify-between gap-4 py-5"
