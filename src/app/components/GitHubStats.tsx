@@ -107,9 +107,6 @@ export function GitHubStats() {
           <h2 className="ka-display text-[clamp(2.4rem,6vw,4.4rem)] text-white mb-5">
             {t.stats.title}
           </h2>
-          <p className="text-white/55 text-base md:text-lg leading-relaxed mb-6">
-            {t.stats.subtitle}
-          </p>
           <a
             href={`https://github.com/${PROFILE}`}
             target="_blank"
