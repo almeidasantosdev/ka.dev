@@ -325,14 +325,9 @@ export function Trajectory() {
           className="max-w-3xl"
         >
           <p className="ka-eyebrow mb-4 text-[var(--ka-cobalt)]">{t.trajectory.eyebrow}</p>
-          <h2 className="ka-display text-[clamp(2.4rem,5.5vw,4.2rem)] text-white mb-4">
+          <h2 className="ka-display text-[clamp(2.4rem,5.5vw,4.2rem)] text-white">
             {t.trajectory.title}
           </h2>
-          <p className="text-white/55 text-base md:text-lg leading-relaxed">
-            {language === "pt"
-              ? "Um corredor vertical de etapas — formação e produção, cada uma com peso próprio."
-              : "A vertical corridor of stages — education and production, each with its own weight."}
-          </p>
         </motion.div>
       </div>
 
