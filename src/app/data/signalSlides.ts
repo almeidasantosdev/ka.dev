@@ -3,175 +3,70 @@ import type { SceneId } from "../lib/scenes";
 export type SignalSlide = {
   id: string;
   sceneId: SceneId;
+  repo: string;
+  url: string;
   eyebrow: { pt: string; en: string };
   title: { pt: string; en: string };
   summary: { pt: string; en: string };
-  points: { pt: string[]; en: string[] };
   stack: string[];
   accent: string;
 };
 
 export const SIGNAL_SLIDES: SignalSlide[] = [
   {
-    id: "signal",
+    id: "delivery-lab-k8s",
     sceneId: "github",
-    eyebrow: { pt: "Evidência", en: "Evidence" },
-    title: {
-      pt: "Código em produção, rastreável no GitHub.",
-      en: "Production code, traceable on GitHub.",
-    },
+    repo: "delivery-lab-k8s",
+    url: "https://github.com/almeidasantosdev/delivery-lab-k8s",
+    eyebrow: { pt: "Repositório", en: "Repository" },
+    title: { pt: "Delivery Lab no Kubernetes", en: "Delivery Lab on Kubernetes" },
     summary: {
-      pt: "Dois perfis ativos — pessoal e Korven Lab — com commits, repositórios e sequência de contribuição. Sinal de entrega contínua, não de repositório vazio.",
-      en: "Two active profiles — personal and Korven Lab — with commits, repositories, and streaks. Evidence of continuous delivery, not empty repos.",
+      pt: "O mesmo container do Delivery Lab, agora num cluster local. A API recebe um webhook de pagamento fictício, grava o evento uma única vez e o worker reentrega com espera crescente. O FOR UPDATE SKIP LOCKED impede que dois pods peguem o mesmo job.",
+      en: "The same Delivery Lab container, now on a local cluster. The API receives a fictional payment webhook, stores the event once, and the worker retries with growing delay. FOR UPDATE SKIP LOCKED keeps two pods from taking the same job.",
     },
-    points: {
-      pt: [
-        "kleidsonadesign e korvenlab no mesmo painel",
-        "Histórico de commits e repos agregados",
-        "Linguagens reais via API do GitHub",
-      ],
-      en: [
-        "kleidsonadesign and korvenlab in one view",
-        "Aggregated commit and repository history",
-        "Live languages from the GitHub API",
-      ],
-    },
-    stack: ["GitHub API", "TypeScript", "Vercel"],
-    accent: "rgba(255,255,255,0.14)",
-  },
-  {
-    id: "typescript",
-    sceneId: "gh-typescript",
-    eyebrow: { pt: "Backend", en: "Backend" },
-    title: {
-      pt: "TypeScript rigoroso no backend.",
-      en: "Strict TypeScript on the backend.",
-    },
-    summary: {
-      pt: "APIs Node tipadas de ponta a ponta — contratos explícitos, menos any, menos regressão quando o produto cresce.",
-      en: "End-to-end typed Node APIs — explicit contracts, less any, fewer regressions as the product scales.",
-    },
-    points: {
-      pt: [
-        "REST e WebSockets com tipagem consistente",
-        "Serviços SaaS com contratos claros entre camadas",
-        "Refatoração segura em bases grandes",
-      ],
-      en: [
-        "REST and WebSockets with consistent typing",
-        "SaaS services with clear layer contracts",
-        "Safer refactors in large codebases",
-      ],
-    },
-    stack: ["TypeScript", "Node.js", "Express", "REST", "WebSockets"],
-    accent: "rgba(49,120,198,0.45)",
-  },
-  {
-    id: "postgres",
-    sceneId: "gh-postgres",
-    eyebrow: { pt: "Dados", en: "Data" },
-    title: {
-      pt: "PostgreSQL modelado para o negócio.",
-      en: "PostgreSQL modeled for the business.",
-    },
-    summary: {
-      pt: "RLS multi-tenant, migrations sem downtime e SQL que carrega regra de domínio — arquitetura de dados pensada para produção, não só CRUD.",
-      en: "Multi-tenant RLS, zero-downtime migrations, and SQL that carries domain rules — data architecture for production, not just CRUD.",
-    },
-    points: {
-      pt: [
-        "Isolamento por tenant com RLS",
-        "Dezenas de migrations em produtos vivos",
-        "Supabase quando o prazo exige velocidade",
-      ],
-      en: [
-        "Per-tenant isolation with RLS",
-        "Dozens of migrations on live products",
-        "Supabase when delivery speed matters",
-      ],
-    },
-    stack: ["PostgreSQL", "RLS", "SQL", "Supabase", "ACID"],
-    accent: "rgba(51,103,145,0.5)",
-  },
-  {
-    id: "distributed",
-    sceneId: "gh-distributed",
-    eyebrow: { pt: "Integrações", en: "Integrations" },
-    title: {
-      pt: "Webhooks e APIs sob carga real.",
-      en: "Webhooks and APIs under real load.",
-    },
-    summary: {
-      pt: "Outbox, idempotência e backoff para eventos externos — o mesmo padrão que evita cobrança duplicada e perda de sincronização com terceiros.",
-      en: "Outbox, idempotency, and backoff for external events — the same pattern that prevents double charges and lost third-party sync.",
-    },
-    points: {
-      pt: [
-        "Consumo e exposição de APIs REST",
-        "Webhooks com chave de idempotência",
-        "Filas e jobs com recuperação previsível",
-      ],
-      en: [
-        "Consuming and exposing REST APIs",
-        "Webhooks with idempotency keys",
-        "Queues and jobs with predictable recovery",
-      ],
-    },
-    stack: ["Outbox", "Idempotency", "Webhooks", "Jobs", "HA"],
+    stack: ["Kind", "k3s", "PostgreSQL", "HPA"],
     accent: "rgba(43,91,255,0.42)",
   },
   {
-    id: "fintech",
-    sceneId: "gh-fintech",
-    eyebrow: { pt: "Pagamentos", en: "Payments" },
-    title: {
-      pt: "FinTech com ledger e conciliação.",
-      en: "FinTech with ledger and reconciliation.",
-    },
+    id: "delivery-lab",
+    sceneId: "gh-typescript",
+    repo: "delivery-lab",
+    url: "https://github.com/almeidasantosdev/delivery-lab",
+    eyebrow: { pt: "Repositório", en: "Repository" },
+    title: { pt: "Delivery Lab", en: "Delivery Lab" },
     summary: {
-      pt: "Stripe, Asaas, Mercado Pago e afins com split, Pix/cartão e ledgers atômicos — domínio desacoplado do PSP.",
-      en: "Stripe, Asaas, Mercado Pago and peers with split, Pix/card, and atomic ledgers — domain decoupled from the PSP.",
+      pt: "Laboratório de entrega contínua. Uma API recebe um webhook de pagamento, grava o evento uma única vez e um worker tenta entregar esse evento para um provedor simulado. Se o provedor falha, a tentativa volta para a fila com espera crescente.",
+      en: "A continuous delivery lab. An API receives a payment webhook, stores the event once, and a worker tries to deliver it to a simulated provider. If the provider fails, the attempt returns to the queue with a growing delay.",
     },
-    points: {
-      pt: [
-        "Integração de PSP com webhooks seguros",
-        "Ledgers financeiros atômicos",
-        "Múltiplos provedores sem prender o produto",
-      ],
-      en: [
-        "PSP integration with secure webhooks",
-        "Atomic financial ledgers",
-        "Multiple providers without locking the product",
-      ],
+    stack: ["Node.js", "TypeScript", "PostgreSQL", "Prometheus"],
+    accent: "rgba(49,120,198,0.45)",
+  },
+  {
+    id: "wagoo",
+    sceneId: "gh-postgres",
+    repo: "wagoo",
+    url: "https://github.com/almeidasantosdev/wagoo",
+    eyebrow: { pt: "Repositório", en: "Repository" },
+    title: { pt: "Wagoo", en: "Wagoo" },
+    summary: {
+      pt: "SaaS para espaços de atendimento, no ar em wagoobot.com. A agenda entra pelo WhatsApp, com sinal e comissões, e a operação acompanha tudo num painel. A rotina que antes ficava em conversa manual passa a ser um fluxo do produto.",
+      en: "SaaS for service spaces, live at wagoobot.com. Scheduling comes in through WhatsApp, with deposits and commissions, and the operation follows everything in a dashboard. The routine that used to live in manual chat becomes a product flow.",
     },
-    stack: ["Stripe", "Asaas", "Mercado Pago", "PagBank", "Pagar.me"],
+    stack: ["React", "Node.js", "AWS", "Docker"],
     accent: "rgba(46,180,110,0.32)",
   },
   {
-    id: "ops",
-    sceneId: "gh-ops",
-    eyebrow: { pt: "Produção", en: "Production" },
-    title: {
-      pt: "Do commit ao ar, com trilha.",
-      en: "From commit to live, with a trail.",
-    },
+    id: "papufy",
+    sceneId: "gh-distributed",
+    repo: "papufy",
+    url: "https://github.com/almeidasantosdev/papufy",
+    eyebrow: { pt: "Repositório", en: "Repository" },
+    title: { pt: "Papufy", en: "Papufy" },
     summary: {
-      pt: "Docker, AWS, CI/CD em Render/Vercel e hardening (HMAC, JWT, OWASP) — prova de que o produto sai do laptop e permanece online.",
-      en: "Docker, AWS, CI/CD on Render/Vercel, and hardening (HMAC, JWT, OWASP) — proof the product leaves the laptop and stays online.",
+      pt: "Marketplace B2C de serviços locais, no ar em papufy.com. A pessoa busca por categoria e cidade, publica um pedido de serviço ou um perfil profissional, conversa no chat e acompanha publicações, notificações e carteira. Web e mobile no mesmo produto.",
+      en: "A B2C marketplace for local services, live at papufy.com. People search by category and city, publish a service request or a professional profile, talk in chat, and follow posts, notifications, and a wallet. Web and mobile in the same product.",
     },
-    points: {
-      pt: [
-        "Deploy em infraestrutura moderna",
-        "Pipelines de entrega contínua",
-        "Auth e criptografia no desenho da solução",
-      ],
-      en: [
-        "Deploy on modern infrastructure",
-        "Continuous delivery pipelines",
-        "Auth and cryptography in the solution design",
-      ],
-    },
-    stack: ["Docker", "AWS", "CI/CD", "HMAC", "JWT", "OWASP"],
-    accent: "rgba(232,168,74,0.28)",
+    stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    accent: "rgba(43,91,255,0.5)",
   },
 ];

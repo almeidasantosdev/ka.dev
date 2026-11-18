@@ -285,7 +285,7 @@ export const translations: Record<Language, Translation> = {
       eyebrow: "02 / Signal",
       title: "Código em movimento.",
       subtitle:
-        "Sinal técnico no GitHub e profundidade na stack que sustenta APIs, dados, pagamentos e entrega em produção.",
+        "Quatro repositórios recentes — cada um com o trecho do README que diz o que o projeto faz.",
       profile: "Ver perfil no GitHub",
       commits: "Estatísticas",
       languages: "Top linguagens",
@@ -391,8 +391,8 @@ export const translations: Record<Language, Translation> = {
         },
         {
           platform: "GitHub",
-          username: "github.com/kleidsonadesign",
-          url: "https://github.com/kleidsonadesign",
+          username: "github.com/almeidasantosdev",
+          url: "https://github.com/almeidasantosdev",
         },
         {
           platform: "E-mail",
@@ -468,7 +468,7 @@ export const translations: Record<Language, Translation> = {
       eyebrow: "02 / Signal",
       title: "Code in motion.",
       subtitle:
-        "GitHub signal and depth in the stack that powers APIs, data, payments, and production delivery.",
+        "Four recent repositories — each with the README excerpt that says what the project does.",
       profile: "View GitHub profile",
       commits: "Stats",
       languages: "Top languages",
@@ -574,8 +574,8 @@ export const translations: Record<Language, Translation> = {
         },
         {
           platform: "GitHub",
-          username: "github.com/kleidsonadesign",
-          url: "https://github.com/kleidsonadesign",
+          username: "github.com/almeidasantosdev",
+          url: "https://github.com/almeidasantosdev",
         },
         {
           platform: "Email",
