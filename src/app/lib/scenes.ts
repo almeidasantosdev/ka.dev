@@ -74,7 +74,7 @@ export const SCENES: Record<SceneId, SceneTheme> = {
     bg: "#08080e",
     glow: "rgba(255, 255, 255, 0.12)",
     glowAlt: "rgba(43, 91, 255, 0.22)",
-    name: "SIGNAL",
+    name: "K8S",
     ink: "#f7f7f8",
   },
   "gh-typescript": {
@@ -82,7 +82,7 @@ export const SCENES: Record<SceneId, SceneTheme> = {
     bg: "#071018",
     glow: "rgba(49, 120, 198, 0.42)",
     glowAlt: "rgba(255, 255, 255, 0.08)",
-    name: "TS",
+    name: "LAB",
     ink: "#eaf3ff",
   },
   "gh-postgres": {
@@ -90,7 +90,7 @@ export const SCENES: Record<SceneId, SceneTheme> = {
     bg: "#061018",
     glow: "rgba(51, 103, 145, 0.48)",
     glowAlt: "rgba(255, 255, 255, 0.07)",
-    name: "POSTGRES",
+    name: "WAGOO",
     ink: "#e8f2fa",
   },
   "gh-distributed": {
@@ -98,7 +98,7 @@ export const SCENES: Record<SceneId, SceneTheme> = {
     bg: "#070b16",
     glow: "rgba(43, 91, 255, 0.4)",
     glowAlt: "rgba(255, 255, 255, 0.08)",
-    name: "SYSTEMS",
+    name: "PAPUFY",
     ink: "#eef2ff",
   },
   "gh-fintech": {

@@ -1,5 +1,5 @@
 /**
- * Aggregates GitHub stats for kleidsonadesign + korvenlab.
+ * Aggregates GitHub stats for almeidasantosdev + korvenlab.
  *
  * Always merges public repos from both accounts.
  * With GITHUB_TOKEN / GITHUB_TOKEN_KORVEN (classic `repo` scope, or fine-grained
@@ -7,7 +7,7 @@
  * Never returns private repo names — only aggregates.
  */
 
-const PERSONAL = "kleidsonadesign";
+const PERSONAL = "almeidasantosdev";
 const KORVEN = "korvenlab";
 const OWNERS = new Set([PERSONAL, KORVEN]);
 
